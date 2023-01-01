@@ -1,4 +1,7 @@
+<script>
+       import BackToTop from "./back_to_top.svelte";
 
+</script>
 
 <div class = "navbar_">
 
@@ -41,6 +44,12 @@
 </div>
 
 <slot></slot>
+
+<footer>
+    © Jordan Dialpuri 2023  
+</footer>
+
+<BackToTop />
 
 <!--<div class = "content">-->
 
@@ -103,6 +112,18 @@ input[type=checkbox]{
     user-select: none;
     color:white;
 }
+
+footer {
+        width: 100%;
+        background-color: var(--bg-1);
+        height: 5vh;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 5vh; 
+        color: var(--text-primary)
+        /* justify-content: center; */
+    }
+
 
 @media (max-width: 768px) {
     .menu {

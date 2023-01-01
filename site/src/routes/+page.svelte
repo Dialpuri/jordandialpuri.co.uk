@@ -1,7 +1,6 @@
 <script> 
     export const prerender = true;
 
-   import BackToTop from "./back_to_top.svelte";
     import { onMount } from "svelte";
 
     onMount(() => {
@@ -206,11 +205,7 @@
 
 </section>
 
-<footer>
 
-</footer>
-
-<BackToTop />
 
 <style>
 
