@@ -1,4 +1,6 @@
 <script> 
+    export const prerender = true;
+
    import BackToTop from "./back_to_top.svelte";
     import { onMount } from "svelte";
 
@@ -269,6 +271,10 @@
 
     }
 
+    .contact h4 { 
+        text-align: center
+    }
+
     iframe { 
         width: 70vw;
         height: calc(70vw*0.8);
@@ -278,6 +284,11 @@
 
     .contact h2 { 
         padding-top: 1rem;
+        text-align: center;
+
+    }
+
+    .contact address { 
         text-align: center;
     }
 

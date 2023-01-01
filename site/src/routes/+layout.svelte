@@ -1,3 +1,5 @@
+
+
 <div class = "navbar_">
 
     <h1 style=""><span style = "color:var(--text-secondary)">Jordan </span>Dialpuri</h1>
@@ -92,7 +94,7 @@ a {
 }
 
 .menu li:hover {
-    background-color: var(--orange-yellow-crayola);
+    background-color: var(--text-tertiary);
     color: black;
     border-radius: 5px;
     transition: 0.3s ease;
@@ -117,7 +119,7 @@ input[type=checkbox]{
     .menu {
         display: none;
         position: absolute;
-        background-color: var(--bg-primary);
+        background-color: var(--bg-2);
         right: 0;
         left: 0;
         text-align: center;
@@ -126,7 +128,7 @@ input[type=checkbox]{
 
     .menu li:hover {
         display: inline-block;
-        background-color: #6649b8;
+        background-color: var(--text-tertiary);
         transition: 0.3s ease;
     }
 
@@ -136,7 +138,7 @@ input[type=checkbox]{
 
     .hamburger {
         display: block;
-        color:white;
+        color:var(--bg-1);
     }
 
 
