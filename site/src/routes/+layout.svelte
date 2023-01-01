@@ -33,8 +33,8 @@
                     <span>Contact</span>
                 </a>
             </li>
-            <a href = "https://www.github.com/dialpuri"><img style = "max-height: 2rem;" src = "images/github.png"></a>
-            <a href = "https://www.linkedin.com/in/jordan-dialpuri/"><img style = "max-height: 2rem;" src = "images/linkedin.png"></a>
+            <a href = "https://www.github.com/dialpuri"><img style = "max-height: 2rem;" src = "images/github.png" alt = "Github Logo"></a>
+            <a href = "https://www.linkedin.com/in/jordan-dialpuri/"><img style = "max-height: 2rem;" src = "images/linkedin.png" alt = "Linkedin Logo"></a>
 
         </div>
     </ul>
@@ -53,12 +53,6 @@
 <!--</div>-->
 
 <style>
-.content {
-    display: flex;
-    margin: 1rem;
-    padding: 0;
-    gap: 1rem;
-}
 
 .navbar_ {
     display: flex;
@@ -73,12 +67,7 @@
 .navbar-links a {
     color: black;
 }
-
-.navbar-item ul {
-    margin: 0;
-    padding: 0;
-}
-
+ 
 li {
     list-style: none;
 }

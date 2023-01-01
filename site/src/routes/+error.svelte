@@ -9,7 +9,7 @@
         <h1>{$page.error.message}</h1>
     </div>
 
-    <img src = "images/404.png"/>
+    <img src = "images/404.png" alt = "Memoji of Jordan Dialpuri"/>
 
 </div>
 

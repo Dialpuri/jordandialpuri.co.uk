@@ -26,7 +26,7 @@
             <h1>Jordan Dialpuri</h1>
         </div>
 
-        <img src = "images/memoji.png"/>
+        <img src = "images/memoji.png" alt = "Memoji of Jordan Dialpuri"/>
 
     </div>
 
@@ -200,7 +200,7 @@
         </address>
 
         <center>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2792.467204895688!2d-1.0554953073503617!3d53.94638762760822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487930324a78a6f3%3A0xe55ee181ddf91d18!2sUniversity%20of%20York!5e0!3m2!1sen!2suk!4v1672491867081!5m2!1sen!2suk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id = "map"></iframe>
+        <iframe title = "Map View of University of York" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2792.467204895688!2d-1.0554953073503617!3d53.94638762760822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487930324a78a6f3%3A0xe55ee181ddf91d18!2sUniversity%20of%20York!5e0!3m2!1sen!2suk!4v1672491867081!5m2!1sen!2suk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id = "map"></iframe>
     </center>
     </div>
 
@@ -238,10 +238,6 @@
 
     }
 
-    .projects h2 { 
-        padding-top: 1rem;
-    }
-
     .project-content { 
         background-color: var(--bg-2);
         border-radius: 15px;
@@ -251,6 +247,8 @@
         flex-grow: 1;
         flex-shrink: 1; 
         flex-basis: 1; 
+        text-align: justify;
+        text-justify: inter-word;
         /* max-width: 25vw; */
     }
 
