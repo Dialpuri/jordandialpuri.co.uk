@@ -402,10 +402,5 @@
         box-shadow: 0px 0px 10px 2px var(--bg-2);
     }
 
-    footer {
-        width: 100%;
-        background-color: var(--bg-1);
-        height: 5vh;
-    }
 
 </style>
