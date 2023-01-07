@@ -14,7 +14,8 @@ const config = {
 			fallback: null,
 			// strict: false,
 
-		})
+		}), 
+		outDir: "../build"
 	}
 };
 
