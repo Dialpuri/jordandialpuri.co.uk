@@ -33,11 +33,13 @@
         
         <h2 style = "text-align: center; color: var(--text-secondary); padding-top: 1rem;"> Projects </h2>
         <div class="projects">
-
         <div class="project-content">
-            <h4>Nautilus</h4>
+
+            <h4 >Nautilus </h4>
+
             Currently, I am working on Nautilus (Cowtan, 2014).
-            Nautilus is a program for automatic model building of nucleotide structures in electron density maps. It will trace a map with no model, extend an existing model, or add nucleotide chains to an existing non-nucleotide model. I am working to improve the reliability and completeness of the models as part of my PhD. This project is almost entirely in C++.
+            Nautilus is a program for automatic model building of nucleotide structures in electron density maps. It will trace a map with no model, extend an existing model, or add nucleotide chains to an existing non-nucleotide model. I am working to improve the reliability and completeness of the models as part of my PhD. This project is almost entirely in C++ and the code is available on <a href = "http://www.github.com/dialpuri/nautilus" style="color: inherit;text-decoration: none"target="_blank">
+        </a>.
         </div>
         <div class="project-content">
             <h4>Privateer</h4>
@@ -245,6 +247,11 @@
         text-align: justify;
         text-justify: inter-word;
         /* max-width: 25vw; */
+    }
+
+    .github {
+        text-decoration: none;
+        color: var(--text-secondary);
     }
 
     .about {
