@@ -1,0 +1,39 @@
+{
+	"compilerOptions": {
+		"baseUrl": "../site",
+		"paths": {},
+		"rootDirs": [
+			"../site",
+			"./types"
+		],
+		"importsNotUsedAsValues": "error",
+		"isolatedModules": true,
+		"preserveValueImports": true,
+		"lib": [
+			"esnext",
+			"DOM",
+			"DOM.Iterable"
+		],
+		"moduleResolution": "node",
+		"module": "esnext",
+		"target": "esnext"
+	},
+	"include": [
+		"ambient.d.ts",
+		"./types/**/$types.d.ts",
+		"../site/vite.config.ts",
+		"../site/src/**/*.js",
+		"../site/src/**/*.ts",
+		"../site/src/**/*.svelte",
+		"../site/src/**/*.js",
+		"../site/src/**/*.ts",
+		"../site/src/**/*.svelte",
+		"../site/tests/**/*.js",
+		"../site/tests/**/*.ts",
+		"../site/tests/**/*.svelte"
+	],
+	"exclude": [
+		"../site/node_modules/**",
+		"./[!ambient.d.ts]**"
+	]
+}
