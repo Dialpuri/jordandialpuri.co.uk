@@ -1,26 +1,23 @@
 {
-  "routes/+layout.css": {
-    "file": "_app/immutable/assets/_layout-77431341.css",
-    "src": "routes/+layout.css"
-  },
   "routes/+error.css": {
     "file": "_app/immutable/assets/_error-8879eb3f.css",
     "src": "routes/+error.css"
+  },
+  "routes/+layout.css": {
+    "file": "_app/immutable/assets/_layout-77431341.css",
+    "src": "routes/+layout.css"
   },
   "routes/+page.css": {
     "file": "_app/immutable/assets/_page-6046109b.css",
     "src": "routes/+page.css"
   },
-  "routes/+layout.js": {
-    "file": "_app/immutable/modules/pages/_layout.js-201f66d9.js",
-    "src": "routes/+layout.js",
-    "isEntry": true,
+  "../../build/generated/nodes/2.js": {
+    "file": "_app/immutable/chunks/2-018f97f1.js",
+    "src": "../../build/generated/nodes/2.js",
+    "isDynamicEntry": true,
     "imports": [
-      "__layout-76b2ab9d.js"
+      "routes/+page.svelte"
     ]
-  },
-  "__layout-76b2ab9d.js": {
-    "file": "_app/immutable/chunks/_layout-76b2ab9d.js"
   },
   "../../build/generated/nodes/1.js": {
     "file": "_app/immutable/chunks/1-7947beb0.js",
@@ -28,6 +25,14 @@
     "isDynamicEntry": true,
     "imports": [
       "routes/+error.svelte"
+    ]
+  },
+  "routes/+layout.js": {
+    "file": "_app/immutable/modules/pages/_layout.js-201f66d9.js",
+    "src": "routes/+layout.js",
+    "isEntry": true,
+    "imports": [
+      "__layout-76b2ab9d.js"
     ]
   },
   "../../build/generated/nodes/0.js": {
@@ -39,12 +44,13 @@
       "routes/+layout.svelte"
     ]
   },
-  "../../build/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-018f97f1.js",
-    "src": "../../build/generated/nodes/2.js",
-    "isDynamicEntry": true,
+  "__layout-76b2ab9d.js": {
+    "file": "_app/immutable/chunks/_layout-76b2ab9d.js"
+  },
+  "_singletons-c033f3b6.js": {
+    "file": "_app/immutable/chunks/singletons-c033f3b6.js",
     "imports": [
-      "routes/+page.svelte"
+      "_index-efe5b6ab.js"
     ]
   },
   "routes/+error.svelte": {
@@ -57,12 +63,6 @@
     ],
     "css": [
       "_app/immutable/assets/_error-8879eb3f.css"
-    ]
-  },
-  "_singletons-c033f3b6.js": {
-    "file": "_app/immutable/chunks/singletons-c033f3b6.js",
-    "imports": [
-      "_index-efe5b6ab.js"
     ]
   },
   "_index-efe5b6ab.js": {
