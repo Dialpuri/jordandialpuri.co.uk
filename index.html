@@ -1,58 +1,699 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="./favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="content-security-policy" content="">
-		<link rel="modulepreload" href="app/immutable/start-b1f87c7a.js">
-		<link rel="modulepreload" href="app/immutable/chunks/index-efe5b6ab.js">
-		<link rel="modulepreload" href="app/immutable/chunks/singletons-c033f3b6.js">
-		<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">	
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">
-		<script type="module" data-sveltekit-hydrate="45h">
-			import { start } from "./app/immutable/start-b1f87c7a.js";
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href=favicon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+</head>
+<body data-sveltekit-preload-data="hover">
+<div style="display: contents">
 
-			start({
-				env: {},
-				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="45h"]').parentNode,
-				version: "1673306443930"
-			});
-		</script></div>
-	</body>
+    <div class = "navbar_">
 
+        <h1 style=""><span style = "color:var(--text-secondary)">Jordan </span>Dialpuri</h1>
+
+
+        <ul class = "navbar-links">
+
+            <input type="checkbox" id="checkbox_toggle" />
+
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+            <div class = "menu">
+                <li>
+                    <a href = "/">
+                        <span>Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href = "#projects">
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href = "#about">
+                        <span>About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href = "#contact">
+                        <span>Contact</span>
+                    </a>
+                </li>
+                <a href = "https://www.github.com/dialpuri"><img style = "max-height: 2rem;" src = "github.png" alt = "Github Logo"></a>
+                <a href = "https://www.linkedin.com/in/jordan-dialpuri/"><img style = "max-height: 2rem;" src = "linkedin.png" alt = "Linkedin Logo"></a>
+
+            </div>
+        </ul>
+    </div>
+
+
+    <section style = "display: flex; flex-direction: column">
+
+        <div class = "fill_screen bg_1 hero">
+
+            <div class = "hero_name">
+                <h2>Hello, my name is </h2>
+                <h1>Jordan Dialpuri</h1>
+            </div>
+
+            <img src = "memoji.png" alt = "Memoji of Jordan Dialpuri"/>
+
+        </div>
+
+        <div class = "bg_2" id="projects">
+
+            <h2 style = "text-align: center; color: var(--text-secondary); padding-top: 1rem;"> Projects </h2>
+            <div class="projects">
+                <div class="project-content">
+
+                    <h4 >Nautilus </h4>
+
+                    Currently, I am working on Nautilus (Cowtan, 2014).
+                    Nautilus is a program for automatic model building of nucleotide structures in electron density maps. It will trace a map with no model, extend an existing model, or add nucleotide chains to an existing non-nucleotide model. I am working to improve the reliability and completeness of the models as part of my PhD. This project is almost entirely in C++ and the code is available on <a href = "http://www.github.com/dialpuri/nautilus" style="color: inherit;text-decoration: none"target="_blank">
+                </a>.
+                </div>
+                <div class="project-content">
+                    <h4>Privateer</h4>
+                    As part of a summer project I worked on Privateer.  Privateer is a tool for carbohydrate structure validation, re-refinement and graphical analysis. I was able to implement a new metric called a 'Z-score' which compares the current models torsion angles to a known database. This database was computed from validated structures in the Protein Data Bank. This project was completed using Python and C++.
+                </div>
+                <div class="project-content">
+                    <h4>Chemdle</h4>
+                    After the webapp Wordle gained popularity, I created a clone called Chemdle. Chemdle was aimed to help students grasp nomeclature in chemistry in a fun, relatable way. Every day, a new molecule would appear for users to try and guess in a similar style to Wordle. The frontend of this project was written in vanilla Javascript with no framework and the backend used was Django (Python) backend.
+                </div>
+                <div class="project-content">
+                    <h4>Chemix</h4>
+                    Chemix is an online editor for drawing lab diagrams and school experiment apparatus. I helped add new apparatus and implement new features as part of the development team. This was a rewarding experience as I learnt many techniques utilised by larger teams such as version control and test driven development. This project was completed in Typescript.
+                </div>
+                <div class="project-content">
+                    <h4>Bragg Visualiser</h4>
+                    To aid my revision for the principles of diffraction course in my undergraduate degree, I created BraggVisualiser. This was a webapp which aimed to visually explain some of the abstract concepts in X-ray crystallography such as the Ewald Sphere. This webapp was incorporated and improved upon for the course for the following year. This project was completed in vanilla Javascript.
+                </div>
+
+
+            </div>
+
+            <div class = "bg_1 about" id="about">
+                <h2> About </h2>
+
+                <div class = "timeline-container">
+                    <div class = "timeline">
+                        <h3>Education</h3>
+                        <ul>
+                            <li>
+                                <span>October 2022 - Present</span>
+                                <div class="content">
+                                    <div class = "text-content">
+
+                                        <h3>PhD in Biological Chemistry - University of York</h3>
+
+                                        <div class = "extra-content">
+                                            <p>
+                                                <span>Project Title: Automated model building of protein-nucleotide complexes using X-ray data and Alphafold models.</span>
+                                                <span>Supervisors: Professor Kevin Cowtan and Dr Jon Agirre</span>
+                                                <span>Presented work at Proteins by Candlelight conference in first month of PhD</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span>September 2018 - August 2022</span>
+                                <div class="content">
+                                    <div class = "text-content">
+                                        <h3>MChem in Chemistry - University of York</h3>
+                                        <div class = "extra-content">
+
+                                            <p>
+                                                Graduated with First Class Honours with Distinction (1*).
+                                            </p>
+                                        </div>
+                                    </div>                        </div>
+
+                            </li>
+                            <li>
+                                <span>September 2011 - June 2018</span>
+                                <div class="content">
+                                    <div class = "text-content">
+                                        <h3>King Edwards VI Camp Hill School for Boys</h3>
+                                        <div class = "extra-content">
+
+                                            <span>• A levels in Maths (A), Chemistry (A) and Biology (A)</span>
+                                            <span>• AS level in Computer Science (A)</span>
+                                            <span>• 10 GCSEs (5 A* and 5A)</span>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class = "timeline">
+                        <h3>Experience</h3>
+
+                        <ul>
+                            <li>
+                                <span>October 2022 - Present</span>
+                                <div class="content">
+                                    <div class = "text-content">
+
+                                        <h3>Summer Project - University of York</h3>
+                                        <div class = "extra-content">
+
+                                            <p>
+                                                <span>Project Title: N-glycan torsion angles</span>
+                                                <span>Supervisors: Professor Kevin Cowtan and Dr Jon Agirre</span>
+                                                <span>Presented work at Proteins by Candlelight conference in first month of PhD</span>
+                                            </p>
+                                        </div>                        </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <span>June 2021 - August 2022</span>
+                                <div class="content">
+                                    <div class = "text-content">
+                                        <h3>Industrial Placement Student - Afton Chemical</h3>
+                                        <div class = "extra-content">
+
+                            <span>• One year placement as part of fourth year of undergraduate degree, undertaking a research
+                            project.</span>
+                                            <span>• Developed novel experiments and quantified success by running frequent infrared spectroscopy
+                            analyses.</span>
+                                            <span>• Implementing machine learning models to assist company function.</span>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </li>
+                            <li>
+                                <span>June 2020 - August 2020</span>
+                                <div class="content">
+                                    <div class = "text-content">
+                                        <h3>Summer Project - University of York</h3>
+                                        <div class = "extra-content">
+
+                            <span>
+                                • Wrote article on decolonisation of the scientific curriculum for Chemistry Review.
+                            </span>
+                                            <span>
+                                • Focused on highlighting the achievements of black and minority ethnic (BAME) scientists.
+                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- <div class="spacer-3-4"></div> -->
+
+            <div class="fill_screen bg_4 contact" id = "contact">
+                <h2>Contact</h2>
+
+                <h4>You can contact me by email at jsd523@york.ac.uk</h4>
+
+                <address>
+                    York Structural Biology Laboratory,
+                    Department of Biology,
+                    University of York,
+                    Heslington,
+                    York
+                    YO10 5DD
+                </address>
+
+                <center>
+                    <iframe title = "Map View of University of York" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2792.467204895688!2d-1.0554953073503617!3d53.94638762760822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487930324a78a6f3%3A0xe55ee181ddf91d18!2sUniversity%20of%20York!5e0!3m2!1sen!2suk!4v1672491867081!5m2!1sen!2suk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id = "map"></iframe>
+                </center>
+            </div>
+
+    </section>
+
+<!--    <button onclick="topFunction()" id="myBtn" class = "back-to-top"><span></span></button>-->
+    <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+    <footer>
+        © Jordan Dialpuri 2023
+    </footer>
+
+
+    <style>
+
+    </style>
+
+</div>
 <style>
 
-	:root {
-		font-family: "Oxygen";
+    :root {
+        font-family: "Oxygen";
 
-		--bg-1 : #425664;
-		--bg-2 : #F6F4F2; 
-		--bg-3 : #425664;
-		--bg-4 : #F6F4F2; 
-		--text-primary: #F6F4F2;
-		--text-secondary: #425664;
-		--text-tertiary: #C6AD8F;
-	}
-	body {
-		margin: 0;
-		padding: 0;
-	}
+        --bg-1 : #425664;
+        --bg-2 : #F6F4F2;
+        --bg-3 : #425664;
+        --bg-4 : #F6F4F2;
+        --text-primary: #F6F4F2;
+        --text-secondary: #425664;
+        --text-tertiary: #C6AD8F;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+    }
 
-	body::-webkit-scrollbar {
-		width: 0.25rem;
-	}
+    body::-webkit-scrollbar {
+        width: 0.25rem;
+    }
 
-	body::-webkit-scrollbar-track {
-		background-color: var(--bg-1);
-	}
+    body::-webkit-scrollbar-track {
+        background-color: var(--bg-1);
+    }
 
-	body::-webkit-scrollbar-thumb {
-		background-color: var(--text-tertiary);
-	}
+    body::-webkit-scrollbar-thumb {
+        background-color: var(--text-tertiary);
+    }
+
+
+    .bg_1 {
+        background-color: var(--bg-1);
+    }
+
+    .bg_2 {
+        background-color: var(--bg-2);
+    }
+
+
+    .navbar_ {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /*padding: 1rem;*/
+        padding-inline: 1rem;
+        background-color: var(--bg-2);
+        border-bottom: var(--text-tertiary) solid 1px;
+    }
+
+    .navbar-links a {
+        color: black;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .menu {
+        display: flex;
+        gap: 1em;
+        font-size: 18px;
+    }
+
+    .menu li:hover {
+        background-color: var(--text-tertiary);
+        color: black;
+        border-radius: 5px;
+        transition: 0.3s ease;
+    }
+
+    .menu li { padding: 5px}
+
+    input[type=checkbox]{
+
+        display: none;
+
+    }
+
+    .hamburger {
+        display: none;
+        font-size: 24px;
+        user-select: none;
+        color:white;
+    }
+
+    footer {
+        width: 100%;
+        background-color: var(--bg-1);
+        height: 5vh;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 5vh;
+        color: var(--text-primary)
+        /* justify-content: center; */
+    }
+
+
+    @media (max-width: 768px) {
+        .menu {
+            display: none;
+            position: absolute;
+            background-color: var(--bg-2);
+            right: 0;
+            left: 0;
+            text-align: center;
+
+        }
+
+        .menu li:hover {
+            display: inline-block;
+            background-color: var(--text-tertiary);
+            transition: 0.3s ease;
+        }
+
+        input[type=checkbox]:checked ~ .menu {
+            display: block;
+        }
+
+        .hamburger {
+            display: block;
+            color:var(--bg-1);
+        }
+
+
+
+    }
+
+
+    .projects {
+        display: flex;
+        flex-direction: row;
+        /* gap: 1rem; */
+        flex-wrap: wrap;
+        align-items: center;
+        justify-items: center;
+        justify-content: space-evenly;
+        min-height: 100vh;
+        width: 100%;
+        margin-bottom: 1rem;
+        color: var(--text-secondary);
+        /* padding-inline: 2rem; */
+
+    }
+
+    .project-content {
+        background-color: var(--bg-2);
+        border-radius: 15px;
+        padding:1rem;
+        padding-inline: 1rem;
+        max-width: 80vw;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 1;
+        text-align: justify;
+        text-justify: inter-word;
+        /* max-width: 25vw; */
+    }
+
+    .github {
+        text-decoration: none;
+        color: var(--text-secondary);
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+        align-content: center;
+        align-items: center;
+        /* justify-content: center; */
+        color: var(--text-secondary);
+
+    }
+
+    .contact h4 {
+        text-align: center
+    }
+
+    iframe {
+        width: 70vw;
+        height: calc(70vw*0.8);
+
+        max-height: 60vh
+    }
+
+    .contact h2 {
+        padding-top: 1rem;
+        text-align: center;
+
+    }
+
+    .contact address {
+        text-align: center;
+    }
+
+    .about h2 {
+        padding-top: 1rem;
+        color: var(--text-primary)
+    }
+
+    .timeline-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        min-height: 100vh;
+        width: 100%;
+        color: var(--bg-2);
+    }
+
+    .hero_name {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+
+    }
+
+    .hero_name h1 {
+        font-size: 5rem;
+        text-align: center;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        color : white;
+    }
+
+    @media (max-width: 600px) {
+        .hero img { display: none}
+        .hero_name { text-align: center;}
+        /* .project-content {margin-inline: 1rem;} */
+        .extra-content { display: none}
+        .timeline-container { flex-direction: column}
+    }
+    .hero img {
+        max-width: 30vh;
+        max-height: 30vh;
+        aspect-ratio: 1/1;
+    }
+
+    .fill_screen {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .timeline {
+        background-color: var(--bg-1);
+        color: var(--text-primary);
+        padding: 30px 20px;
+        margin-inline: 1rem;
+    }
+
+    .timeline ul {
+        list-style-type: none;
+        border-left: 2px solid var(--text-tertiary);
+        padding: 10px 5px;
+
+    }
+
+    .timeline ul li {
+        padding: 20px 20px;
+        position: relative;
+        cursor: pointer;
+        border-radius: 20px;
+        transition: .5s;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .timeline ul li span {
+        display: inline-block;
+        background-color: var(--bg-1);
+        border-radius: 25px;
+        padding: 2px 5px;
+        font-size: 15px;
+        /*text-align: center;*/
+    }
+
+    .timeline ul li .content h3 {
+        color: var(--text-primary);
+        font-size: 17px;
+        padding-top: 5px;
+    }
+
+    .timeline ul li .content p {
+        padding: 5px 0px 15px 0px;
+        font-size: 15px;
+    }
+
+    .timeline ul li:before {
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 10px;
+        background-color: var(--text-tertiary);
+        border-radius: 50%;
+        left: -11px;
+        top: 28px;
+        transition: .5s;
+    }
+
+    .timeline ul li:hover:before {
+        background-color: var(--bg-2);
+        box-shadow: 0px 0px 10px 2px var(--bg-2);
+    }
+
+    .back-to-top {
+        opacity: 1;
+        /* transition: opacity 0.5s, visibility 0.5s; */
+        position: fixed;
+        z-index: 999;
+        right: 5%;
+        bottom: 75px;
+        cursor:pointer;
+        -webkit-border-radius:60px;
+        -moz-border-radius:60px;
+        text-indent:-9999px;
+
+        user-select: none;
+        color: white;
+        background-color: var(--text-tertiary);
+    }
+
+    .back-to-top span {
+        position:absolute;
+        top:50%;
+        left:50%;
+        margin-left:-8px;
+        margin-top:-12px;
+        height:0;
+        width:0;
+        border:8px solid transparent;
+        border-bottom-color:var(--text-tertiary);
+    }
+
+    .back-to-top:hover {
+        background-color:#e74c3c;
+        opacity:1;filter:"alpha(opacity=100)";
+        -ms-filter:"alpha(opacity=100)";
+    }
+
+    .back-to-top.hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+    #return-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.7);
+        width: 50px;
+        height: 50px;
+        display: block;
+        text-decoration: none;
+        -webkit-border-radius: 35px;
+        -moz-border-radius: 35px;
+        border-radius: 35px;
+        display: none;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+    #return-to-top i {
+        color: #fff;
+        margin: 0;
+        position: relative;
+        left: 16px;
+        top: 13px;
+        font-size: 19px;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+    #return-to-top:hover {
+        background: rgba(0, 0, 0, 0.9);
+    }
+    #return-to-top:hover i {
+        color: #fff;
+        top: 5px;
+    }
 
 </style>
+<script>
+
+    // document.getElementById(window).scroll(function() {
+    //     if (document.querySelector(this).scrollTop >= 50) {        // If page is scrolled more than 50px
+    //         document.querySelector('#return-to-top').fadeIn(200);    // Fade in the arrow
+    //     } else {
+    //         document.querySelector('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    //     }
+    // });
+    // document.querySelector('#return-to-top').click(function() {      // When arrow is clicked
+    //     document.querySelector('body,html').animate({
+    //         scrollTop : 0                       // Scroll to top of body
+    //     }, 500);
+    });
+    //
+    // // Get the button:
+    // let mybutton = document.getElementById("myBtn");
+    //
+    // // When the user scrolls down 20px from the top of the document, show the button
+    // window.onscroll = function() {scrollFunction()};
+    //
+    // function scrollFunction() {
+    //     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    //         console.log("SCROLLING")
+    //         mybutton.style.display = "block";
+    //     } else {
+    //         mybutton.style.display = "none";
+    //     }
+    // }
+    //
+    // // When the user clicks on the button, scroll to the top of the document
+    // function topFunction() {
+    //     document.body.scrollTop = 0; // For Safari
+    //     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    // }
+</script>
+</body>
+
 </html>
