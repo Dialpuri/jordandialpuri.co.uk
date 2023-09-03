@@ -1,6 +1,5 @@
 {
 	"compilerOptions": {
-		"baseUrl": "../site",
 		"paths": {},
 		"rootDirs": [
 			"../site",
@@ -25,15 +24,15 @@
 		"../site/src/**/*.js",
 		"../site/src/**/*.ts",
 		"../site/src/**/*.svelte",
-		"../site/src/**/*.js",
-		"../site/src/**/*.ts",
-		"../site/src/**/*.svelte",
 		"../site/tests/**/*.js",
 		"../site/tests/**/*.ts",
 		"../site/tests/**/*.svelte"
 	],
 	"exclude": [
 		"../site/node_modules/**",
-		"./[!ambient.d.ts]**"
+		"./[!ambient.d.ts]**",
+		"../site/src/service-worker.js",
+		"../site/src/service-worker.ts",
+		"../site/src/service-worker.d.ts"
 	]
 }
