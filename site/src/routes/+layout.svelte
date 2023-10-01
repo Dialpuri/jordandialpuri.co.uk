@@ -27,10 +27,17 @@
                 </a>
             </li>
             <li>
-                <a href = "#about">
-                    <span>About</span>
+                <a href = "#education">
+                    <span>Education</span>
                 </a>
             </li>
+            
+            <li>
+                <a href = "#experience">
+                    <span>Experience</span>
+                </a>
+            </li>
+
             <li>
                 <a href = "#contact">
                     <span>Contact</span>
@@ -115,12 +122,12 @@ input[type=checkbox]{
 
 footer {
         width: 100%;
-        background-color: var(--bg-1);
+        background-color: var(--bg-4);
         height: 5vh;
         text-align: center;
         vertical-align: middle;
         line-height: 5vh; 
-        color: var(--text-primary)
+        color: var(--text-pri)
         /* justify-content: center; */
     }
 
