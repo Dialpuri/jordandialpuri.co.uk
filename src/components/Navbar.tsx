@@ -7,9 +7,9 @@ export default function Navbar() {
                 <span className="text-sm text-gray-500">PhD Student | University of York</span>
             </div>
             <nav className="flex flex-row space-x-6 mt-auto mb-auto">
-                <a href="about" className="font-bold tracking-tight">About</a>
-                <a href="about" className="font-bold tracking-tight">Publications</a>
-                <a href="about" className="font-bold tracking-tight">Contact</a>
+                <a href="#about" className="font-bold tracking-tight">About</a>
+                <a href="#publications" className="font-bold tracking-tight">Publications</a>
+                {/*<a href="about" className="font-bold tracking-tight">Contact</a>*/}
             </nav>
         </header>
     )
