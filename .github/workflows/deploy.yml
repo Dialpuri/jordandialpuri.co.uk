@@ -42,6 +42,9 @@ jobs:
           name: production-files
           path: ./dist
 
+      - name: Create CNAME
+        run: echo "jordandialpuri.co.uk" > ./dist/CNAME
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
