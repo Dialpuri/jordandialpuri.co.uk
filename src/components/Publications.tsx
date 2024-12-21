@@ -73,7 +73,7 @@ export default function Publications(){
         }
     ]
 
-    return <section className="flex flex-col" id="publications">
+    return <section className="flex bg-white flex-col pb-4" id="publications">
         <h1 className="ml-0 sm:ml-24 mb-4 text-lg font-extrabold text-center sm:text-left leading-none tracking-tight text-gray-900 md:text-xl">
             A collection of my published works.
         </h1>

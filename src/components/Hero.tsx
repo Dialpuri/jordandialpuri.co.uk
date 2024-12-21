@@ -1,7 +1,7 @@
 export default function Hero() {
 
     return <section className="bg-gradient-to-b from-primary from-85% to-white to-85% flex flex-col md:flex-row justify-center text-center align-middle py-12 sm:py-8 rounded-b-2xl px-4 md:px-8 lg:px-20 lg:space-x-20">
-            <div className="mt-auto pb-12" id="about">
+            <div className="mt-auto pb-12" id="hero">
                 <h1 className="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl lg:pr-8">
                     Innovative solutions with machine learning and web applications.
                 </h1>
