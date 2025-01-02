@@ -33,7 +33,7 @@ function ModalButtonSet(props: { url: string, onClick: () => void }) {
     </div>;
 }
 
-export default function Example(props: {
+export default function PublicationModal(props: {
     open: boolean,
     setOpen: Dispatch<SetStateAction<boolean>>,
     publication: Publication

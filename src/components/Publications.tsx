@@ -1,5 +1,5 @@
 import {useState} from "react";
-import Example from "./Modal.tsx";
+import PublicationModal from "./PublicationModal.tsx";
 
 function PublicationBox(publication: Publication, id: string): JSX.Element {
     const [modalOpen, setModalOpen] = useState(false);
@@ -15,7 +15,7 @@ function PublicationBox(publication: Publication, id: string): JSX.Element {
             <span className="italic">{publication.authors}</span>
         </p>
 
-        {modalOpen ? <Example open={modalOpen} setOpen={setModalOpen} publication={publication} />: <></>}
+        {modalOpen ? <PublicationModal open={modalOpen} setOpen={setModalOpen} publication={publication} />: <></>}
 
 
     </button>;
