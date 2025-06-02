@@ -31,7 +31,7 @@ export default function Timeline() {
                 <EducationSVG/>
                 </span>
                 <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
-                    Doctor of Philosphy in Biological Chemistry
+                    Doctor of Philosophy in Biological Chemistry
                 </h3>
                 <div
                     className="flex mb-2 text-sm font-normal leading-none justify-between text-gray-400 dark:text-gray-500">
