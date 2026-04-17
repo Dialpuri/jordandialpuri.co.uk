@@ -6,9 +6,9 @@ export default function Navbar() {
                 <h1 className=" font-extrabold leading-none tracking-tight text-gray-900 mt-auto mb-auto">Jordan
                     Dialpuri</h1>
                 <div className="flex flex-col mt-1 sm:flex-row sm:space-x-1 ">
-                <span className="text-sm text-gray-500">PhD Student</span>
+                <span className="text-sm text-gray-500">Postdoctoral Scientist</span>
                 <span className="text-sm text-gray-500 hidden sm:block">|</span>
-                <span className="text-sm text-gray-500">University of York</span>
+                <span className="text-sm text-gray-500">MRC Lab of Molecular Biology, Cambridge</span>
                 </div>
 
             </div>

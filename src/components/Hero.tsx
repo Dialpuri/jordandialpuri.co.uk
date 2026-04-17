@@ -6,9 +6,12 @@ export default function Hero() {
                     Innovative solutions with machine learning and web applications.
                 </h1>
                 <p className="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-8 xl:px-12 dark:text-gray-400">
-                    I am a final year PhD student in the York Structural Biology Laboratory,
-                    developing novel methods for modelling protein-nucleotide and protein-sugar complexes using
-                    deep-learning models and X-ray diffraction data.
+                   I am a postdoctoral scientist in the MRC Lab of Molecular Biology in Cambridge. I work on developing
+                    and improving the ubiquitous software package for macromolecular structure solution, Coot.
+                    <br/>
+                    <br/>
+                        My PhD project involved developing software methods for automated model building
+                    of nucleic acids and carbohydrates using deep learning models and experimental data.
                 </p>
                 <div className="mx-auto mt-6 justify-center flex flex-row space-x-8">
                     <a href="https://github.com/Dialpuri" target="_blank" rel="noopener noreferrer">

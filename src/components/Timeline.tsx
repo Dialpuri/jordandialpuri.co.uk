@@ -28,6 +28,22 @@ export default function Timeline() {
             <li className="mb-10 ms-6">
             <span
                 className="absolute flex items-center justify-center w-6 h-6 bg-primary rounded-full -start-3 ring-8 ring-white">
+                <CompanySVG/>
+                </span>
+                <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                    Postdoctoral Scientist
+                </h3>
+                <div
+                    className="flex mb-2 text-sm font-normal leading-none justify-between text-gray-400 dark:text-gray-500">
+                    <span>MRC Lab of Molecular Biology, Cambridge</span>
+                    <time>April 2026 - Present</time>
+                </div>
+                <CVListItem text="Project Focus: Modernising and developing new features for the Coot software package."/>
+
+            </li>
+            <li className="mb-10 ms-6">
+            <span
+                className="absolute flex items-center justify-center w-6 h-6 bg-primary rounded-full -start-3 ring-8 ring-white">
                 <EducationSVG/>
                 </span>
                 <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
@@ -36,11 +52,9 @@ export default function Timeline() {
                 <div
                     className="flex mb-2 text-sm font-normal leading-none justify-between text-gray-400 dark:text-gray-500">
                     <span>University of York</span>
-                    <time>October 2022 - Present</time>
+                    <time>October 2022 - April 2026</time>
                 </div>
-                <CVListItem text="Title: Automated model
-                    building of protein-nucleotide and protein-sugar complexes using X-ray data and
-                    deep learning models."/>
+                <CVListItem text="Title: Automated Model Building of Nucleic Acids and Carbohydrates Using Experimental Data and Deep Learning Models."/>
                 <CVListItem text="Produced deep learning
                     models
                     which simulate the intuition of an expert crystallographer to produce
