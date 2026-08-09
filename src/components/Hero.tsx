@@ -1,37 +1,151 @@
-export default function Hero() {
+import { site } from "../data/site";
+// Scholar metrics are kept out of the hero deliberately; raw citation counts
+// invite comparison against people much further into their careers. Restore the
+// `stats` block below (and this import) if you ever want them back.
+// import { metrics } from "../data/site";
+import {
+  DownloadIcon,
+  GitHubIcon,
+  LinkedInIcon,
+  MailIcon,
+  ScholarIcon,
+} from "./icons";
 
-    return <section className="bg-gradient-to-b from-primary from-85% to-white to-85% flex flex-col md:flex-row justify-center text-center align-middle py-12 sm:py-8 rounded-b-2xl px-4 md:px-8 lg:px-20 lg:space-x-20">
-            <div className="mt-auto pb-12" id="hero">
-                <h1 className="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl lg:pr-8">
-                    Innovative solutions with machine learning and web applications.
-                </h1>
-                <p className="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-8 xl:px-12 dark:text-gray-400">
-                   I am a postdoctoral scientist in the MRC Lab of Molecular Biology in Cambridge. I work on developing
-                    and improving the ubiquitous software package for macromolecular structure solution, Coot.
-                    <br/>
-                    <br/>
-                        My PhD project involved developing software methods for automated model building
-                    of nucleic acids and carbohydrates using deep learning models and experimental data.
-                </p>
-                <div className="mx-auto mt-6 justify-center flex flex-row space-x-8">
-                    <a href="https://github.com/Dialpuri" target="_blank" rel="noopener noreferrer">
-                        <img src="/github.png" className="h-8 w-8 md:w-10 md:h-10 hover:scale-110 hover:cursor-pointer"
-                             alt="Github Logo"/>
-                    </a>
-                    <a href="https://scholar.google.com/citations?hl=en&user=xz6r-DMAAAAJ" target="_blank"
-                       rel="noopener noreferrer">
-                        <img src="/scholar.png"
-                             className="h-8 w-9 md:w-10 md:h-10 hover:scale-110 hover:cursor-pointer"
-                             alt="Google Scholar Logo"/>
-                    </a>
-                    <a href="https://linkedin.com/in/jordan-dialpuri" target="_blank" rel="noopener noreferrer">
-                        <img src="/linkedin.png"
-                             className="h-8 w-9 md:w-12 md:h-10 hover:scale-110 hover:cursor-pointer"
-                             alt="Linkedin Logo"/>
-                    </a>
-                </div>
+const socials = [
+  { href: site.github, label: "GitHub", Icon: GitHubIcon },
+  { href: site.scholar, label: "Google Scholar", Icon: ScholarIcon },
+  { href: site.linkedin, label: "LinkedIn", Icon: LinkedInIcon },
+];
+
+// const stats = [
+//     { value: `${metrics.publications}`, label: "Publications" },
+//     { value: `${metrics.citations}`, label: "Citations" },
+//     { value: `${metrics.hIndex}`, label: "h-index" },
+//     { value: "4", label: "Software packages" },
+// ];
+
+const summary: { term: string; description: string }[] = [
+  { term: "Field", description: "Machine learning for structural biology" },
+  { term: "Languages", description: "C++, Python, TypeScript" },
+  {
+    term: "Current",
+    description:
+      "Development of Coot at the MRC Laboratory of Molecular Biology",
+  },
+  {
+    term: "Doctorate",
+    description: "Biological Chemistry, University of York",
+  },
+  {
+    term: "Open to",
+    description: "Research software and machine learning positions",
+  },
+];
+
+export default function Hero() {
+  return (
+    <section
+      id="top"
+      aria-labelledby="hero-heading"
+      className="border-b border-line"
+    >
+      <div className="shell grid animate-fade-up gap-12 py-16 sm:py-20 lg:grid-cols-12 lg:items-start lg:gap-16 lg:py-24">
+        <div className="lg:col-span-7">
+          <p className="font-mono text-xs uppercase tracking-[0.16em] text-faint">
+            {site.org} · {site.location}
+          </p>
+
+          <h1
+            id="hero-heading"
+            className="mt-5 font-display text-3xl font-extrabold leading-[1.12] tracking-tight text-ink sm:text-4xl lg:text-5xl"
+          >
+            Machine learning and software for macromolecular structure
+            determination.
+          </h1>
+
+          <p className="mt-6 text-lg leading-relaxed text-muted">
+            I am a postdoctoral scientist at the MRC Laboratory of Molecular
+            Biology, where I work on{" "}
+            <strong className="font-semibold text-ink">Coot</strong>, a program
+            used throughout structural biology to build and validate
+            macromolecular models against experimental data.
+          </p>
+          <p className="mt-4 text-lg leading-relaxed text-muted">
+            My doctoral research at the University of York addressed the
+            automated model building of nucleic acids and carbohydrates. I
+            produced open-source convolutional neural networks that interpret
+            experimental density directly, together with the C++ and Python
+            packages which use that information to automatically build models.
+          </p>
+
+          <div className="mt-9 flex flex-wrap items-center gap-3">
+            <a
+              href={site.cv}
+              className="btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <DownloadIcon className="h-4 w-4" />
+              Curriculum vitae
+            </a>
+            <a href={`mailto:${site.email}`} className="btn-secondary">
+              <MailIcon className="h-4 w-4" />
+              Email
+            </a>
+            <div className="ml-1 flex items-center gap-1">
+              {socials.map(({ href, label, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  title={label}
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-md text-faint transition-colors hover:bg-raised hover:text-ink"
+                >
+                  <Icon />
+                </a>
+              ))}
             </div>
-        <img src="/memoji.png" alt="Memoji of Jordan Dialpuri"
-             className="rounded-full border-4 border-gray-700 w-32 h-32  mx-auto sm:w-1/4 sm:h-1/4"/>
+          </div>
+        </div>
+
+        <div className="lg:col-span-5">
+          <div className="rounded-xl border border-line bg-surface p-6">
+            {/* Stacked when the card is narrow (phone, and the lg sidebar);
+                            side by side in between, where a centred portrait would
+                            otherwise float in a lot of empty width. */}
+            <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:text-left lg:flex-col lg:text-center">
+              <img
+                src="/jordandialpuri.jpeg"
+                alt="Jordan Dialpuri"
+                width={160}
+                height={160}
+                className="h-28 w-28 shrink-0 rounded-full bg-accentSoft object-cover"
+              />
+              <div>
+                <p className="font-display text-lg font-extrabold tracking-tight text-ink">
+                  {site.name}, PhD
+                </p>
+                <p className="mt-0.5 text-sm text-muted">{site.role}</p>
+              </div>
+            </div>
+
+            <dl className="mt-6 divide-y divide-line border-t border-line">
+              {summary.map((row) => (
+                <div key={row.term} className="py-3 sm:flex sm:gap-4">
+                  <dt className="font-mono text-[0.68rem] uppercase tracking-[0.14em] text-faint sm:w-24 sm:shrink-0 sm:pt-0.5">
+                    {row.term}
+                  </dt>
+                  <dd className="mt-1 text-sm leading-snug text-ink sm:mt-0">
+                    {row.description}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
+      </div>
     </section>
+  );
 }

@@ -2,18 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    font-family: "Barlow", "Noto Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-            "width" 100;
-    background-color: rgba(251, 250, 255, 1);
-    margin: 0;
-    padding: 0;
+@layer base {
+  :root {
+    --c-bg: 251 250 255;
+    --c-surface: 255 255 255;
+    --c-raised: 247 247 251;
+    --c-ink: 17 20 28;
+    --c-muted: 90 96 110;
+    /* Held at >=4.5:1 against --c-bg so small print still passes WCAG AA. */
+    --c-faint: 108 116 132;
+    --c-line: 228 229 236;
+    --c-accent: 47 76 99;
+    --c-accent-ink: 255 255 255;
+    --c-accent-soft: 231 244 254;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Stop the sticky header covering headings when jumping to an anchor. */
+    scroll-padding-top: 6rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-bg text-ink font-sans antialiased;
+  }
+
+  /* One visible, consistent focus ring everywhere rather than none at all. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-bg rounded-sm;
+  }
+
+  ::selection {
+    @apply bg-accentSoft text-ink;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 }
 
-html {
-    scroll-behavior: smooth;
+@layer components {
+  .shell {
+    @apply mx-auto w-full max-w-content px-5 sm:px-8 lg:px-12;
+  }
+
+  .section-title {
+    @apply font-display text-2xl font-extrabold tracking-tight text-ink sm:text-[1.75rem];
+  }
+
+  .section-lede {
+    @apply mt-3 text-base leading-relaxed text-muted;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2.5 text-sm font-semibold transition-colors duration-150;
+  }
+
+  .btn-primary {
+    @apply btn bg-accent text-accentInk hover:bg-ink;
+  }
+
+  .btn-secondary {
+    @apply btn border border-line bg-surface text-ink hover:bg-raised;
+  }
+
+  .tag {
+    @apply inline-flex items-center rounded border border-line bg-raised px-2 py-1 font-mono text-[0.7rem] font-medium text-muted;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded bg-accentSoft px-2 py-1 font-mono text-[0.68rem] font-medium text-accent;
+  }
 }

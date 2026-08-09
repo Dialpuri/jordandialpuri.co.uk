@@ -1,22 +1,45 @@
+import { site } from "../data/site";
+import { MailIcon } from "./icons";
+
+const links = [
+  { href: "#software", label: "Software" },
+  { href: "#publications", label: "Publications" },
+  { href: "#experience", label: "Experience" },
+];
+
 export default function Navbar() {
-    return (
-        <header className="bg-primary flex flex-row px-4 p-8 align-middle justify-center text-l md:text-xl lg:text-xl lg:px-24">
+  return (
+    <header className="sticky top-0 z-40 border-b border-line bg-bg/80 backdrop-blur-md">
+      <div className="shell flex h-16 items-center gap-6 sm:h-20">
+        <a href="#top" className="mr-auto min-w-0 rounded-md">
+          <span className="block truncate font-display text-base font-extrabold tracking-tight text-ink sm:text-lg">
+            {site.name}
+          </span>
+          {/* Only shown once there is room for it to sit on one line. */}
+          <span className="mt-0.5 hidden truncate text-xs text-muted lg:block">
+            {site.role} · {site.org}
+          </span>
+        </a>
 
-            <div className="flex-col mr-auto">
-                <h1 className=" font-extrabold leading-none tracking-tight text-gray-900 mt-auto mb-auto">Jordan
-                    Dialpuri</h1>
-                <div className="flex flex-col mt-1 sm:flex-row sm:space-x-1 ">
-                <span className="text-sm text-gray-500">Postdoctoral Scientist</span>
-                <span className="text-sm text-gray-500 hidden sm:block">|</span>
-                <span className="text-sm text-gray-500">MRC Lab of Molecular Biology, Cambridge</span>
-                </div>
+        {/* Section links are a convenience on wide screens. On a phone the
+                    page is short enough to scroll, so they make way for Contact. */}
+        <nav className="hidden items-center gap-7 md:flex">
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="rounded-md text-sm font-medium text-muted transition-colors hover:text-ink"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
 
-            </div>
-            <nav className="flex flex-row space-x-6 mt-auto mb-auto">
-                <a href="#about" className="font-bold tracking-tight">About</a>
-                <a href="#publications" className="font-bold tracking-tight">Publications</a>
-                {/*<a href="about" className="font-bold tracking-tight">Contact</a>*/}
-            </nav>
-        </header>
-    )
+        <a href="#contact" className="btn-primary">
+          <MailIcon className="h-4 w-4" />
+          Contact
+        </a>
+      </div>
+    </header>
+  );
 }
