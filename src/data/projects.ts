@@ -91,7 +91,7 @@ export interface SkillGroup {
 export const skills: SkillGroup[] = [
   {
     label: "Systems",
-    items: ["HPC", "CMake", "Github Actions", "Cloudflare"],
+    items: ["HPC", "CMake", "GitHub Actions", "Cloudflare"],
   },
   {
     label: "Machine learning",
