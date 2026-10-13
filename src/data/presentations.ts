@@ -3,12 +3,26 @@ export interface Presentation {
   event: string;
   location: string;
   date: string;
-  dateLabel: string;
   file: string;
   slides: number;
   sizeMb: number;
   summary: string;
   topics: string[];
+}
+
+const suffixes = ["th", "st", "nd", "rd"];
+
+export function dateParts(iso: string) {
+  const date = new Date(`${iso}T00:00:00`);
+  const day = date.getDate();
+
+  return {
+    day,
+    suffix: suffixes[(day - 20) % 10] ?? suffixes[day] ?? suffixes[0],
+    monthYear: `${date.toLocaleDateString("en-GB", {
+      month: "long",
+    })} ${date.getFullYear()}`,
+  };
 }
 
 /** Newest first — the order the page renders them in. */
@@ -18,7 +32,6 @@ export const presentations: Presentation[] = [
     event: "Bay Area Users' Light Source Meeting",
     location: "Stanford University, USA",
     date: "2026-09-25",
-    dateLabel: "25 September 2026",
     file: "/presentations/stanford-ai-in-crystallography.pdf",
     slides: 38,
     sizeMb: 13.8,
@@ -31,7 +44,6 @@ export const presentations: Presentation[] = [
     event: "CCP4 Shanghai Workshop",
     location: "Shanghai, China",
     date: "2026-09-15",
-    dateLabel: "15 September 2026",
     file: "/presentations/shanghai-automated-model-building.pdf",
     slides: 59,
     sizeMb: 15.2,
@@ -50,7 +62,6 @@ export const presentations: Presentation[] = [
     event: "CCP4 Shanghai Workshop",
     location: "Shanghai, China",
     date: "2026-09-14",
-    dateLabel: "14 September 2026",
     file: "/presentations/shanghai-coot-and-moorhen.pdf",
     slides: 83,
     sizeMb: 29.4,

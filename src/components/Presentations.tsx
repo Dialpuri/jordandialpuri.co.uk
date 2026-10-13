@@ -1,7 +1,13 @@
-import { presentations, type Presentation } from "../data/presentations";
+import {
+  dateParts,
+  presentations,
+  type Presentation,
+} from "../data/presentations";
 import { ArrowUpRightIcon, DownloadIcon } from "./icons";
 
 function PresentationCard({ presentation }: { presentation: Presentation }) {
+  const { day, suffix, monthYear } = dateParts(presentation.date);
+
   return (
     <article className="flex flex-col rounded-xl border border-line bg-surface p-6 sm:p-7">
       <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
@@ -10,7 +16,8 @@ function PresentationCard({ presentation }: { presentation: Presentation }) {
           dateTime={presentation.date}
           className="font-mono text-sm font-medium text-faint"
         >
-          {presentation.dateLabel}
+          {day}
+          <sup className="text-[0.75em]">{suffix}</sup> {monthYear}
         </time>
       </div>
 
@@ -78,8 +85,8 @@ export default function Presentations() {
           </h1>
           <p className="section-lede">
             Slides from talks and workshop lectures I have given, free to
-            download. Several are teaching material written for
-            workshops which include captions.
+            download. Several are teaching material written for workshops which
+            include captions.
           </p>
         </div>
 
