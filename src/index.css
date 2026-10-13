@@ -1,6 +1,39 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@source "../index.html";
+@source "../presentations/index.html";
+@theme {
+  --color-bg: rgb(var(--c-bg));
+  --color-surface: rgb(var(--c-surface));
+  --color-raised: rgb(var(--c-raised));
+  --color-ink: rgb(var(--c-ink));
+  --color-muted: rgb(var(--c-muted));
+  --color-faint: rgb(var(--c-faint));
+  --color-line: rgb(var(--c-line));
+  --color-accent: rgb(var(--c-accent));
+  --color-accent-ink: rgb(var(--c-accent-ink));
+  --color-accent-soft: rgb(var(--c-accent-soft));
+
+  --font-display: "Barlow", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Drives max-w-content. */
+  --container-content: 72rem;
+
+  --animate-fade-up: fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
 
 @layer base {
   :root {
@@ -30,11 +63,11 @@
 
   /* One visible, consistent focus ring everywhere rather than none at all. */
   :focus-visible {
-    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-bg rounded-sm;
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-bg rounded-xs;
   }
 
   ::selection {
-    @apply bg-accentSoft text-ink;
+    @apply bg-accent-soft text-ink;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -52,36 +85,34 @@
   }
 }
 
-@layer components {
-  .shell {
-    @apply mx-auto w-full max-w-content px-5 sm:px-8 lg:px-12;
-  }
+@utility shell {
+  @apply mx-auto w-full max-w-content px-5 sm:px-8 lg:px-12;
+}
 
-  .section-title {
-    @apply font-display text-2xl font-extrabold tracking-tight text-ink sm:text-[1.75rem];
-  }
+@utility section-title {
+  @apply font-display text-2xl font-extrabold tracking-tight text-ink sm:text-[1.75rem];
+}
 
-  .section-lede {
-    @apply mt-3 text-base leading-relaxed text-muted;
-  }
+@utility section-lede {
+  @apply mt-3 text-base leading-relaxed text-muted;
+}
 
-  .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2.5 text-sm font-semibold transition-colors duration-150;
-  }
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2.5 text-sm font-semibold transition-colors duration-150;
+}
 
-  .btn-primary {
-    @apply btn bg-accent text-accentInk hover:bg-ink;
-  }
+@utility btn-primary {
+  @apply btn bg-accent text-accent-ink hover:bg-ink;
+}
 
-  .btn-secondary {
-    @apply btn border border-line bg-surface text-ink hover:bg-raised;
-  }
+@utility btn-secondary {
+  @apply btn border border-line bg-surface text-ink hover:bg-raised;
+}
 
-  .tag {
-    @apply inline-flex items-center rounded border border-line bg-raised px-2 py-1 font-mono text-[0.7rem] font-medium text-muted;
-  }
+@utility tag {
+  @apply inline-flex items-center rounded border border-line bg-raised px-2 py-1 font-mono text-[0.7rem] font-medium text-muted;
+}
 
-  .chip {
-    @apply inline-flex items-center rounded bg-accentSoft px-2 py-1 font-mono text-[0.68rem] font-medium text-accent;
-  }
+@utility chip {
+  @apply inline-flex items-center rounded bg-accent-soft px-2 py-1 font-mono text-[0.68rem] font-medium text-accent;
 }

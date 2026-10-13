@@ -1,8 +1,3 @@
-/**
- * Inline SVG replacements for the PNG logos. These inherit `currentColor`, so
- * they stay legible in dark mode and cost ~130 kB less than the bitmaps.
- */
-
 type IconProps = { className?: string };
 
 const base = "h-5 w-5";
@@ -133,6 +128,22 @@ export function CheckIcon({ className = "h-4 w-4" }: IconProps) {
       aria-hidden="true"
     >
       <path d="m4 12.5 5.5 5.5L20 7" />
+    </svg>
+  );
+}
+
+export function MenuIcon({ className = base }: IconProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      aria-hidden="true"
+    >
+      <path d="M4 7h16M4 12h16M4 17h16" />
     </svg>
   );
 }
