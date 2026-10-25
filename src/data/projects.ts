@@ -24,7 +24,7 @@ export const projects: Project[] = [
     summary:
       "A program for building, refining and validating macromolecular models against crystallographic and cryo-EM data.",
     detail:
-      "Coot has been in continuous use in structural biology laboratories since 2004. My work concerns the modernisation of its C++ codebase, the extension of its Python API, and most importantly, the creation of next-generation features using machine learning and large language models. ",
+      "Coot has been in continuous use in structural biology laboratories since 2004. My work concerns the modernisation of its C++ codebase, the extension of its Python API, and most importantly, the creation of next-generation features. One new feature I developed is a new command line interface which dramatically increases the efficiency of interactive model building.",
     tags: ["C++", "Python"],
     links: [
       {

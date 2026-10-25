@@ -18,8 +18,21 @@ const entries: Entry[] = [
     org: "MRC Laboratory of Molecular Biology, Cambridge",
     period: "April 2026 — Present",
     points: [
-      "Modernisation of its C++ codebase and the extension of Coot Python API.",
-      "Creation of next-generation features using machine learning and large language models.",
+        "Integrating deep learning methods developed during doctorate into Coot to advance model-building capabilities for nucleic acid and carbohydrates.",
+      "Combined quantum chemical calculations of conformational states with Bayesian statistics to aid automated model building of carbohydrates.",
+      "Implemented command line interface to Coot to increase efficiency in structural modelling and visualisation.",
+      "Invited to teach Coot and model building at international structural biology workshop.",
+    ],
+  },
+  {
+    kind: "work",
+    title: "Co-founder",
+    org: "Nerate Ltd.",
+    period: "January 2024 — Present",
+    points: [
+      "Co-founded data visualisation training company offering in-person and online training to researchers in academia.",
+      "Provided training to over 10 academic institutions in the United Kingdom and United States.",
+      "Engineered all website and cloud infrastructure for custom online training platform.",
     ],
   },
   {

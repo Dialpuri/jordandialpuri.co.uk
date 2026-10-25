@@ -65,10 +65,11 @@ export default function Hero() {
 
           <p className="mt-6 text-lg leading-relaxed text-muted">
             I am a postdoctoral scientist at the MRC Laboratory of Molecular
-            Biology, where I work on{" "}
+            Biology, where I work on deep learning models for structural biology problems, and {" "}
             <strong className="font-semibold text-ink">Coot</strong>, a program
             used throughout structural biology to build and validate
-            macromolecular models against experimental data.
+            macromolecular models against experimental data. I also co-founded a data visualisation
+            training company, which provides training to academic institutions.
           </p>
           <p className="mt-4 text-lg leading-relaxed text-muted">
             My doctoral research at the University of York addressed the
