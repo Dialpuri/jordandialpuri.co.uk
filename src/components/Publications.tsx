@@ -161,6 +161,13 @@ export default function Publications() {
             >
               Google Scholar
             </a>
+            . Slides from talks and workshop lectures are on the{" "}
+            <a
+              href="/presentations/"
+              className="font-semibold text-accent hover:underline"
+            >
+              presentations page
+            </a>
             .
           </p>
         </div>
